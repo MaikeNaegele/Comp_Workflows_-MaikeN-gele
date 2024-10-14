@@ -1,0 +1,5 @@
+id,variable,reference,target
+SNI_oxy_Sham_Sal,condition,control_Sham,treated_SNI
+Sham_oxy_Sham_Sal,condition,control_Sham,treated_Sham
+Sham_Sal_SNI_Sal,condition,control_Sham,control_SNI
+SNI_oxy_SNI_Sal,condition,control_SNI,treated_SNI
