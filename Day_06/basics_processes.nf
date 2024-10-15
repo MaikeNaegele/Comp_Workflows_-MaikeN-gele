@@ -24,6 +24,7 @@ process SAYHELLO_PYTHON() {
 
 //Task 3
 process SAYHELLO_PARAM {
+    debug true
 
     input:
     val greeting_ch

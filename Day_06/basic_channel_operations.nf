@@ -71,7 +71,7 @@ workflow{
         //Use fromPath to include all fastq files in the "files_dir" directory
         in_ch = channel.fromPath('files_dir/*.fq')
         //then use map to return a pair containing the file name and the file path (Hint: include groovy code)
-        pair = in_ch.map { fastq_files -> [fastq_files, fastq_files] }
+        pair = in_ch.map { fastq_files -> [fastq_files.getName(), fastq_files] }
         pair.view()
 
         
@@ -143,8 +143,8 @@ workflow{
     if (params.step == 13) {
 
         in_ch = channel.of(1,2,3,4,5,6,7,8,9,10)
-        // Filter the channel for even numbers
 
+        // Filter the channel for even numbers
         in_ch.branch{
             odd: it % 2 !=0
             even: it % 2 ==0
